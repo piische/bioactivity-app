@@ -60,7 +60,7 @@ This app allows you to **predict the bioactivity** towards inhibting the **Monoa
 [1] [Journal of Parkinson's Disease](https://doi.org/10.3233/jpd-212976)
 
 **Credits**
-- App built with **Python** + **Streamlit**, influenced from a existing version of [Chanin Nantasenamat](https://github.com/dataprofessor)
+- App built with **Python** + **Streamlit** by [Patrick Meier](https://patrickmeier.info)
 
 - Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/) [[Read the Paper]](https://doi.org/10.1002/jcc.21707).
 ___
