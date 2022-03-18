@@ -1,5 +1,6 @@
-from requests_cache import disabled
+from sympy import true
 import streamlit as st
+import webbrowser
 import pandas as pd
 from PIL import Image
 import subprocess
@@ -52,23 +53,17 @@ image = Image.open('moab_image.png')
 
 st.image(image, use_column_width=True)
 
-# Page title
-st.title("""Bioactivity prediction to inhibit the Monoamine Oxidase B enzyme""")
-
-st.header("""This app allows you to predict the bioactivity towards inhibting the `Monoamine Oxidase B` enzyme (CHEMBL2039) which is a known drug target for Parkinson's disease.
-""")
-
-
 st.markdown("""
+
+This app allows you to **predict the bioactivity** towards inhibting the **Monoamine Oxidase B** enzyme (CHEMBL2039) which is a known drug target for **Parkinson's disease** [1] by providing a file of small molecules in **SMILES** notation.
+
+[1] [Journal of Parkinson's Disease](https://doi.org/10.3233/jpd-212976)
+
 **Credits**
-- App built with `Python` + `Streamlit`, influenced from a existing version of [Chanin Nantasenamat](https://github.com/dataprofessor)
+- App built with **Python** + **Streamlit**, influenced from a existing version of [Chanin Nantasenamat](https://github.com/dataprofessor)
 
 - Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/) [[Read the Paper]](https://doi.org/10.1002/jcc.21707).
-
-Patrick Meier MSc Medical IT | University of Applied Sciences and Arts Northwestern Switzerland
 ___
-
-
 """)
 
 
@@ -83,11 +78,11 @@ with st.sidebar.header('1. Upload SMILES file'):
 
     with st.sidebar.expander("SMILE file example"):
         st.text("""
-    CC(C)NNC(=O)c1ccncc1 CHEMBL92401
-    O=C1Nc2ccccc2C1=O CHEMBL326294
-    Cl.NC1CC1c1ccccc1 CHEMBL542118
-    COc1cc(O)ccc1O CHEMBL551075
-    NNC(N)=O CHEMBL903    
+            CC(C)NNC(=O)c1ccncc1 CHEMBL92401
+            O=C1Nc2ccccc2C1=O CHEMBL326294
+            Cl.NC1CC1c1ccccc1 CHEMBL542118
+            COc1cc(O)ccc1O CHEMBL551075
+            NNC(N)=O CHEMBL903    
         """)
 
 
