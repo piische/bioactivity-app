@@ -16,13 +16,31 @@ git clone git@github.com:piische/bioactivity-app.git
 cd bioactivity-app
 ```
 
-3. Unzip the model
+3. Create a conda environment called bioactivity
+
+```
+conda create -n bioactivity python=3.7.9
+```
+
+4. Login to the _bioactivity_ environment
+
+```
+conda activate bioactivity
+```
+
+5. Install the dependencies
+
+```
+pip install -r requirements.txt
+```
+
+6. Unzip the model
 
 ```
 unzip moab_model.zip
 ```
 
-4. Start the app
+7. Start the app
 
 ```
 streamlit run small_molecules.py
